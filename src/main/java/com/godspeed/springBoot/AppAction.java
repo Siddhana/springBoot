@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.godspeed.bean.Book;
+import com.godspeed.springBoot.entity.Book;
 
 @RestController
 public class AppAction {
@@ -22,7 +22,7 @@ public class AppAction {
         List<Book> books = new ArrayList<>();
         Book a = new Book("Genesis", "Moss", "100-777");
         Book b = new Book("Gospel of John", "John", "100-888");
-        Book c = new Book("Gospel of Marco", "Marco", "100-888");
+        Book c = new Book("Gospel of Marco", "Marco", "100-999");
         books.add(b);
         books.add(a);
         books.add(c);

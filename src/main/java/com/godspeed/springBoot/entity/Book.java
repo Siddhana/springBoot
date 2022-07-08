@@ -1,4 +1,4 @@
-package com.godspeed.bean;
+package com.godspeed.springBoot.entity;
 
 
 public class Book {
