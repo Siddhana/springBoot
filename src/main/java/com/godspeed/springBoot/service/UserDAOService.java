@@ -1,4 +1,6 @@
-package com.godspeed.springBoot;
+package com.godspeed.springBoot.service;
+
+import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -18,5 +20,9 @@ public class UserDAOService {
     public long insert(User user) {
         em.persist(user);
         return user.getId();
+    }
+    
+    public List<User> findAllUsers() {
+        return em.createNamedQuery("User.findAll").getResultList();
     }
 }

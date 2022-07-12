@@ -3,8 +3,10 @@ package com.godspeed.springBoot.entity;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 
 @Entity
+@NamedQuery(name = "User.findAll", query = "SELECT u FROM User u")
 public class User {
     
     @Id

@@ -1,4 +1,4 @@
-package com.godspeed.springBoot;
+package com.godspeed.springBoot.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,10 +18,13 @@ public class UserDAOServiceCommandLineRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         logger.info("ApplicationStartupRunner run method Started !!");
-        User user = new User("Jack", "Admin");
-        // New User is created : User [id=1, name=Jack, role=Admin]
-        long insert = userDaoService.insert(user);
-        logger.info("New User is created : " + user);
+        User a = new User("Marco", "Admin");
+        User b = new User("John", "Admin");
+        User c = new User("Moss", "Common");
+        userDaoService.insert(a);
+        userDaoService.insert(b);
+        userDaoService.insert(c);
+        
     }
     
 }
