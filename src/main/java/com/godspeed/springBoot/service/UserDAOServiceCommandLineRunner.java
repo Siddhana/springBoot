@@ -12,8 +12,10 @@ import com.godspeed.springBoot.entity.User;
 public class UserDAOServiceCommandLineRunner implements CommandLineRunner {
 
     private static final Logger logger = LoggerFactory.getLogger(UserDAOServiceCommandLineRunner.class);
+    // @Autowired
+    // private UserDAOService userDaoService;
     @Autowired
-    private UserDAOService userDaoService;
+    private UserRepository userRepository;
     
     @Override
     public void run(String... args) throws Exception {
@@ -21,9 +23,12 @@ public class UserDAOServiceCommandLineRunner implements CommandLineRunner {
         User a = new User("Marco", "Admin");
         User b = new User("John", "Admin");
         User c = new User("Moss", "Common");
-        userDaoService.insert(a);
-        userDaoService.insert(b);
-        userDaoService.insert(c);
+        // userDaoService.insert(a);
+        // userDaoService.insert(b);
+        // userDaoService.insert(c);
+        userRepository.save(a);
+        userRepository.save(b);
+        userRepository.save(c);
         
     }
     

@@ -10,13 +10,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.godspeed.springBoot.entity.Book;
 import com.godspeed.springBoot.entity.User;
-import com.godspeed.springBoot.service.UserDAOService;
+import com.godspeed.springBoot.service.UserRepository;
 
 @RestController
 public class AppAction {
     
+    // @Autowired
+    // private UserDAOService userDaoService;
     @Autowired
-    private UserDAOService userDaoService;
+    private UserRepository userRepository;
     
     @GetMapping("/hello")
     public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
@@ -37,6 +39,6 @@ public class AppAction {
     
     @GetMapping("/Users")
     public List<User> getUsers() {
-        return userDaoService.findAllUsers();
+        return (List<User>) userRepository.findAll();
     }
 }

@@ -22,6 +22,7 @@ public class UserDAOService {
         return user.getId();
     }
     
+    @SuppressWarnings("unchecked")
     public List<User> findAllUsers() {
         return em.createNamedQuery("User.findAll").getResultList();
     }
