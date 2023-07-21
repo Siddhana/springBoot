@@ -28,9 +28,9 @@ public class AppAction {
     @GetMapping("/Books")
     public List<Book> getBooks() {
         List<Book> books = new ArrayList<>();
-        Book a = new Book("Genesis", "Moss", "100-777");
-        Book b = new Book("Gospel of John", "John", "100-888");
-        Book c = new Book("Gospel of Marco", "Marco", "100-999");
+        Book a = new Book("Genesis", "Moss", 70);
+        Book b = new Book("Gospel of John", "John", 80);
+        Book c = new Book("Gospel of Marco", "Marco", 90);
         books.add(b);
         books.add(a);
         books.add(c);
